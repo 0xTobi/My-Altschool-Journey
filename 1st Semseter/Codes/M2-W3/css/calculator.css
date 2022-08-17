@@ -1,0 +1,339 @@
+:root {
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.5em);
+
+    --paragraph-text: 1.2rem;
+    --small-text: 0.85rem;
+    --primary-background: rgba(244, 244, 244, 1);
+    --secondary-background: rgba(44, 47, 53, 1);
+    --tertiary-background: rgba(232, 232, 232, 1);
+    --primary-color: rgba(242, 78, 30, 1);
+    --primary-color-10: rgba(242, 78, 30, 0.1);
+    --secondary-color: rgba(162, 89, 255, 1);
+    --secondary-color-10: rgba(162, 89, 255, 0.1);
+    --gradient: linear-gradient(to right bottom, rgba(242, 78, 30, 1), rgba(162, 89, 255, 1));
+    --white: rgba(255, 255, 255, 1);
+    --black: rgba(0, 0, 0, 1);
+    --light-color-87: rgba(255, 255, 255, 0.87);
+    --light-color-60: rgba(255, 255, 255, 0.6);
+    --light-color-38: rgba(255, 255, 255, 0.38);
+    --dark-color-87: rgba(21, 22, 22, 0.87);
+    --dark-color-60: rgba(21, 22, 22, 0.6);
+    --dark-color-38: rgba(21, 22, 22, 0.38);
+}
+
+@media (min-width: 64em) {
+    :root {
+        font-size: 1em;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+
+/* General Styling */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--primary-background);
+    color: var(--dark-color-87);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container > section + section {
+    margin-top: 3em
+}
+
+.section-container {
+    padding: 2em;
+}
+
+.section-container > .section-inner {
+    margin-block-start: 3em;
+}
+
+.section-container > .section-inner__flex {
+    display: block;
+}
+
+@media (min-width: 64em) {
+    .section-container > .section-inner__flex {
+        display: flex;
+    }
+}
+
+.section-container > .section-inner__flex > .item { 
+    flex-grow: initial;
+}  
+
+@media (min-width: 64em) {
+    .section-container > .section-inner__flex > .item { 
+        flex: 1;
+    }  
+}
+
+.section-container > .section-inner__flex > .item + .item  {
+    margin-top: 1.5em
+}
+
+@media (min-width: 64em) {
+    .section-container > .section-inner__flex > .item + .item  {
+        margin-top: 0;
+        margin-left: 1.5em;
+    }  
+}
+
+.flex {
+    display: flex;
+    gap: 2em;
+}
+
+
+.small-text {
+    font-size: var(--small-text);
+}
+
+p {
+    font-size: var(--paragraph-text);
+    line-height: 1.62;
+}
+
+.bordered-text {
+    padding: 0.8em 1.2em;
+    border: 2px solid black;
+    display: inline-block;
+    border-radius: 0.3em;
+}
+
+/* Icon general styling */
+
+.icon > i {
+    display: inline-block;
+    padding: 0.5em;
+    background-color: var(--primary-color-10);
+    color: var(--primary-color);
+    border-radius: 0.2em;
+}
+
+.icon > i + i {
+    margin-left: 0.4em; 
+}
+
+.icon-small > i{
+    font-size: 1rem;
+}
+
+.icon-medium > i {
+    font-size: 1.2rem;
+}
+
+.icon-large > i {
+    font-size: 2rem;
+}
+
+.button {
+    font-size: 1.3rem;
+    display: block;
+    padding: 1em;
+    width: 100%;
+    border-radius: 0.3em;
+    border: none;
+}
+
+/* Form general styling */
+
+input, 
+textarea,
+select {
+    display: block;
+    padding: 0.75em;
+    width: 100%;
+    border-radius: 0.3em;
+    border: 2px solid var(--dark-color-38);
+    background-color: transparent;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-block-end: 1em;
+}
+
+.form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form > .form-header {
+    /* font-size: 1.5em; */
+}
+
+.form > .form-inputs {
+    margin-top: 4em;
+}
+
+.form > .form-inputs > * + * {
+    margin-block-start: 2em;
+}
+
+.form--button {
+    background-color: var(--secondary-background);
+    color: var(--light-color-87);
+}
+
+
+
+
+/* Primary header */
+
+.logo {
+    margin: 1em 2em;
+}
+
+.logo > a {
+    text-decoration: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: var(--primary-background);
+    z-index: 1000;
+}
+
+@media (max-width: 35em) {
+    .primary-header {
+        position: fixed;
+    }
+}
+
+.mobile-nav-toggle {
+display: none;
+}
+
+.primary-navigation {
+    list-style-type: none;
+    padding: 0;
+    margin-inline: 2em;
+    background-color: transparent;
+}
+
+.primary-navigation a {
+    text-decoration: none;
+    color: var(--dark-color-87);
+}
+
+.primary-navigation .special-link {
+    padding: 1em 3em;
+    background-color: var(--secondary-background);
+    color: var(--light-color-87);
+}
+
+@media (max-width: 35em) {
+    .primary-navigation {
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+        margin: 0;
+        background-color: var(--white);
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        background: none;
+        border: 0;
+        color: var(--dark-color-87);
+        position: absolute;
+        font-size: 2rem;
+        top: 2rem;
+        right: 2rem;
+        z-index: 1001;
+    }
+}
+
+/* Calculator styling */
+
+.calculator {
+    margin-top: 5em;
+}
+
+.calculator-inner {
+    background-color: var(--secondary-background);
+    margin: 0 auto;
+    padding: 1.5em;
+    display: inline-block;
+    border-radius: 0.4em;
+}
+
+.calculator table {
+    color: var(--light);
+}
+
+td {
+    background-color: var(--white);
+    border-radius: 0.2em;
+}
+
+input {
+    color: var(--dark-color-87);
+    border: none;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+
+/* Calculator grid styling */
+
+.calculator-inner__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0.4em;
+    max-width: 500px;
+}
+
+.calculator-inner__grid > input {
+    background-color: white;
+}
+
+.calculator-inner__grid > .col-4 {
+    grid-column: 1 / 5;
+    grid-row: span 1;
+}
+
+.calculator-inner__grid > .col-1 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
