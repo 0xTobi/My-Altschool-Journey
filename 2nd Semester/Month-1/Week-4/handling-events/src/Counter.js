@@ -7,6 +7,7 @@ function Counter() {
 
   //  Function to handle increment
   function handleIncrement() {
+    // The previous value stored in the state is available in the setCount function.
     setCount((prev) => prev + 1);
     console.log(count);
   }
@@ -19,7 +20,7 @@ function Counter() {
 
   // Render...
   return (
-    <div className="App">
+    <div className="counter-container">
       <h1>{count}</h1>
       <button className="count-btn" onClick={handleIncrement}>
         +

@@ -9,7 +9,7 @@ function handleChange(event) {
 // Render
 function Form() {
   return (
-    <div className="App">
+    <div className="form-container">
       <form
         onSubmit={(event) => {
           event.preventDefault();
