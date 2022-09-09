@@ -3,7 +3,7 @@ import React from "react";
 // Handle form input changes
 function handleChange(event) {
   event.preventDefault();
-  console.log(`Value is ${event.target.value}`);
+  console.log(`The value is ${event.target.value}`);
 }
 
 // Render
