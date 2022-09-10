@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 // Render
 function MouseHover() {
+  // Storing data with Javascript useSate hook.
   const [state, setState] = useState("Mouse outside this section");
 
   function handleMouseEnter(event) {
@@ -14,6 +15,7 @@ function MouseHover() {
     setState("Mouse outside this section");
   }
 
+  //   This section will be rendered in the DOM.
   return (
     <div className="main-container">
       <div
