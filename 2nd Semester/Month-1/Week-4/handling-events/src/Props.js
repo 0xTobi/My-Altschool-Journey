@@ -9,19 +9,39 @@ import React from "react";
 // }
 
 // Props support destructuring
-function Cars({ brand, dop, color = "Red" }) {
-  console.log(brand, dop);
+function Cars({data}) {
   return (
     <div className="cars">
-      {color} {brand}, created in {dop}
+      {data.color} {data.name}, created in {data.dop}
     </div>
   );
 }
 
 export default function RenderCars() {
-    return <Cars brand="tesla" dop="7th October 2006" />;
-}
+  const cars = [
+    {
+      name: "Toyota",
+      dop: "27th of April 2020",
+      color: "Red",
+    }, 
+    {
+      name: "BMW",
+      dop: "27th of April 2020",
+      color: "Red",
+    },
+    {
+      name: "Audi",
+      dop: "27th of April 2020",
+      color: "Red",
+    },
+  ];
 
+  const carList = cars.map((car) => {
+    return <Cars data={car} key={car.name} />;
+  });
+
+  return <section>{carList}</section>;
+}
 
 // Component props can be destructured...
 // const data = {

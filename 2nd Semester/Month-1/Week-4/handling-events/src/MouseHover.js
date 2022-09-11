@@ -7,7 +7,7 @@ function MouseHover() {
 
   function handleMouseEnter(event) {
     // To show that the value passed to useState is available in the setstate. Basically the previous value.
-    // setState(value => value.length);
+    // setState((value) => value.length);
     setState("Mouse inside this section");
   }
 
