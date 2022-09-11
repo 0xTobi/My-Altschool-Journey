@@ -11,7 +11,7 @@ function Content() {
       lead designer at DotCircle Solutions. I'm passionate about getting and
       sharing knowledge, documentation, web engineering, Jamstack, and others. I
       build useful open-source projects, and I also create aesthetically user
-      interfaces Behance
+      interfaces Behance.
     </p>
   );
 }
