@@ -17,10 +17,10 @@ function Content() {
 }
 
 export function App() {
-  const [Loader, setLoader] = useState(true);
+  const [Loading, setLoading] = useState(true);
 
   setTimeout(() => {
-    setLoader(false);
+    setLoading(false);
   }, 5000);
 
   return Loader ? <IsLoading /> : <Content />;
