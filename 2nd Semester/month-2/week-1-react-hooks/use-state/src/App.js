@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-function UseState() {
+export default function App() {
   const [count, setCount] = useState(0);
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => {
-    setLoading(false)
-  }, 5000)
+    setLoading(false);
+  }, 5000);
 
   function Loading() {
     return <p>Loading...</p>;
@@ -29,13 +29,14 @@ function UseState() {
         and run the next until the batch was complete. Often the output of the
         batch would be written to magnetic tape and printed or punched offline.
         Examples of monitors were IBM's Fortran Monitor System, SOS Share
-        Operating System, and finally IBSYS for IBM's 709x systems in
-        1960.
+        Operating System, and finally IBSYS for IBM's 709x systems in 1960.
       </p>
     );
   }
 
-  const Output = () => loading ? <Loading /> : <Content />
+  function Output() {
+    return loading ? <Loading /> : <Content />;
+  }
 
   const handleIncrement = () => {
     setCount((value) => value + 1);
@@ -55,4 +56,4 @@ function UseState() {
   );
 }
 
-export default UseState;
+
