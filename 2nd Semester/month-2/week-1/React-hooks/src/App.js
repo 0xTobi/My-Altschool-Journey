@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import UseState from "./UseState";
 
 function Welcome() {
   const [welcome, setWelcome] = useState(
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className="App">
       <Welcome />
+      <UseState />
     </div>
   );
 }
