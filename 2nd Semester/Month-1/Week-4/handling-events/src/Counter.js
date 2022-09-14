@@ -7,7 +7,7 @@ function Counter() {
 
   //  Function to handle increment
   function handleIncrement() {
-    // The previous value stored in the state is available in the setCount function.
+    // The previous value stored in the state is available in the setCount function...
     setCount((prev) => prev + 1);
     console.log(count);
   }

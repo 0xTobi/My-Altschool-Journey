@@ -23,6 +23,6 @@ export function App() {
     setLoading(false);
   }, 5000);
 
-  return Loader ? <IsLoading /> : <Content />;
+  return Loading ? <IsLoading /> : <Content />;
 }
 
