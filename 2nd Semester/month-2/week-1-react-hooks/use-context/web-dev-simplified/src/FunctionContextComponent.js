@@ -2,9 +2,9 @@
 // In function component we make use of "useContext"
 
 import React, { useContext } from "react";
-import { ThemeContext } from "./WebDevSimplified";
+import { ThemeContext } from "./App";
 
-function FunctionContextComponent() {
+export default function FunctionContextComponent() {
   //   This useContext takes a context as it's arguement and returns all the values specified in that context. In this case the darkTheme is the only value we specified.
   const darkTheme = useContext(ThemeContext);
 
@@ -19,4 +19,3 @@ function FunctionContextComponent() {
   return <div style={themeStyles(darkTheme)}>Function Theme</div>;
 }
 
-export default FunctionContextComponent;

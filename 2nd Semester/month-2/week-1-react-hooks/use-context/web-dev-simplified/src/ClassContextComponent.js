@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { ThemeContext } from "./WebDevSimplified";
+import { ThemeContext } from "./App";
 
-// This class doesn't have any constructor.
 export default class ClassContextComponent extends Component() {
   // A method that returns an object that hold values that is used to style the component.
   themeStyles(dark) {

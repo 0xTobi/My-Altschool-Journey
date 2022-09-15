@@ -11,7 +11,7 @@ export default function App() {
 
   // This function is responsible for toggling the theme
   function toggleTheme() {
-    setDarkTheme((prevTheme) => !prevTheme);
+    setDarkTheme(prevTheme => !prevTheme);
   }
 
   return (
