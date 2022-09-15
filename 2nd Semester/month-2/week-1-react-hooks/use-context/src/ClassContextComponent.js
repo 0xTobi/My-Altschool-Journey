@@ -15,9 +15,10 @@ class ClassContextComponent extends Component() {
 
     render() {
         return (
-            // The consumer function of the themeCOntext is a function that we need to pass. That function has he value which is darkTheme. Whatever is returned fron this functio  is what is rendered.
+            // Inside the ThemeContext.Consumer component the values in The ThemeContext.Provider are available.
+
             <ThemeContext.Consumer>
-                {darkTheme => {
+                {(darkTheme, language, length) => {
                     return <div style={this.themeStyles(darkTheme)}>Class Theme</div>
                 }}
             </ThemeContext.Consumer>

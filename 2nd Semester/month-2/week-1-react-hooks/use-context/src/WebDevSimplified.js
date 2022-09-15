@@ -1,4 +1,4 @@
-import React, { useContext, useState, createContext } from "react";
+import React, { useState, createContext } from "react";
 import FunctionComponent from "./FunctionContextComponent";
 import ClassComponent from "./ClassContextComponent";
 
@@ -23,7 +23,8 @@ export default function WebDevSimplified() {
         {/* This button invokes the toggleTheme function */}
         <button onClick={toggleTheme}>Toggle Theme</button>
         
-        {/* These two components also do the same thing. Toggle the theme. */}
+        {/* These components are the consumers of the ThemeContext. 
+        They require the darkTheme value which is stored in the ThemeContext*/}
         <FunctionComponent />
         <ClassComponent />
 
