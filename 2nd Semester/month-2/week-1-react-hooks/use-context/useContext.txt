@@ -1,3 +1,12 @@
 The useContext hook allows us to manage state globally. e.g. authenticated user, theme, preferred language.
 Use useContext when you have a global state that will be used in a lot of components.
 
+Basically context is for passing down props all the way down to any of the children without having to explicitly pass the prop to every single children.
+
+For instance, we will have to pass the value prop to every component that needs it like so.
+    
+    <button onClick={toggleTheme}>Toggle Theme</button>
+    <FunctionComponent value={darkTheme}/>
+    <ClassComponent value={darkTheme}/>
+
+

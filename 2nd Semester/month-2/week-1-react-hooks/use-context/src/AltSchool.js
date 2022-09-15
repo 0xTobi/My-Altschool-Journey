@@ -3,19 +3,19 @@ import './App.css';
 
 
 // Create a context for our App
-const AuthContext = createContext({
-  isAuthenticated: false,
-  user: {
-    userName: "Tobi",
-    name: "Aderibigbe Tobi",
-    email: "aderibigbetobi1@gmail.com"
-  }
-})
+// const AuthContext = createContext({
+//   isAuthenticated: false,
+//   user: {
+//     userName: "Tobi",
+//     name: "Aderibigbe Tobi",
+//     email: "aderibigbetobi1@gmail.com"
+//   }
+// })
 
 // Define Context Provider
-function AuthProvider(props) {
-  return 
-}
+// function AuthProvider(props) {
+//   return 
+// }
 
 // A user profile component
 function UserProfile() {
