@@ -30,7 +30,7 @@ function UserProfile() {
 }
 
 // Root component
-export default function AltSchool() {
+export default function App() {
   return (
     <div className="App">
       <UserProfile />

@@ -1,11 +1,11 @@
 import React, { useState, createContext } from "react";
-import FunctionComponent from "./FunctionContextComponent";
-import ClassComponent from "./ClassContextComponent";
+import ClassContextComponent from "./ClassContextComponent";
+import FunctionContextComponent from "./FunctionContextComponent";
 
 // Invoke the createContext function and store it inside ThemeContext.
 export const ThemeContext = createContext();
 
-export default function WebDevSimplified() {
+export default function App() {
   // A darkTheme state with initial value set to true.
   const [darkTheme, setDarkTheme] = useState(true);
 
@@ -19,15 +19,12 @@ export default function WebDevSimplified() {
       {/* Wrap every component that will have access to the ThemeContext prop inside the ThemeContext.Provider. 
       This makes the alues in the ThemeContext available to all the children components */}
       <ThemeContext.Provider value={darkTheme}>
-        
         {/* This button invokes the toggleTheme function */}
         <button onClick={toggleTheme}>Toggle Theme</button>
-        
         {/* These components are the consumers of the ThemeContext. 
         They require the darkTheme value which is stored in the ThemeContext*/}
-        <FunctionComponent />
-        <ClassComponent />
-
+        <ClassContextComponent />
+        <FunctionContextComponent />
       </ThemeContext.Provider>
     </div>
   );
