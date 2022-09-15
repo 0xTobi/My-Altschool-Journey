@@ -1,0 +1,2 @@
+State is essentially a variable that holds some kind of data about your website or application. 
+One cool thing about state is that when it nchangesb the UI also changes.
