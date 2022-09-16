@@ -16,6 +16,6 @@ export default function FunctionContextComponent() {
     margin: "2rem",
   };
 
-  return <div style={themeStyles(darkTheme)}>Function Theme</div>;
+  return <div style={themeStyles}>Function Theme</div>;
 }
 
