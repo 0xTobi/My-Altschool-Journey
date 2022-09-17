@@ -1,7 +1,6 @@
 import React, { useState, createContext } from "react";
 import ClassContextComponent from "./ClassContextComponent copy";
 import FunctionContextComponent from "./FunctionContextComponent copy";
-import { ThemeProvider } from "./ThemeContext";
 
 // Invoke the createContext function and store it inside ThemeContext.
 export const ThemeContext = createContext();
