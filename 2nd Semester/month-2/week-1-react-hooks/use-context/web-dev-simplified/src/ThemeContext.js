@@ -6,10 +6,13 @@ import React, { useContext, useState, createContext } from "react";
 const ThemeContext = createContext();
 const ThemeUpdateContext = createContext();
 
+// A custom hook that returns our ThemeContext.
+// This gives us easy access to the values stored in the context.
 export function useTheme() {
   return useContext(ThemeContext);
 }
 
+// A custom hook that returns our ThemeUpdateContext.
 export function useThemeUpdate() {
   return useContext(ThemeUpdateContext);
 }

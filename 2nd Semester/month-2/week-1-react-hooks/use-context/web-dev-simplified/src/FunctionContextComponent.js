@@ -10,10 +10,12 @@ export default function FunctionContextComponent() {
     color: darkTheme ? "#CCC" : "#333",
     padding: "2rem",
     margin: "2rem",
+    borderRadius: darkTheme? "2em" : "1em"
   };
 
   return (
     <div>
+      {/* So we can modify the themeStyle value from a different component. Not necessarily where we defined it. */}
       <button onClick={toggleTheme}>Toggle Theme</button>
       <div style={themeStyles}>Function Theme</div>
     </div>
