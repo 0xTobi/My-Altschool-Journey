@@ -19,8 +19,8 @@ export default function App() {
       </div>
       <h1>{resourceType}</h1>
       {items.map((item) => {
-         return <p key={item.id}>{JSON.stringify(item)}</p>
+        return <p key={item.id}>{JSON.stringify(item)}</p>;
       })}
     </>
-  ); 
+  );
 }
