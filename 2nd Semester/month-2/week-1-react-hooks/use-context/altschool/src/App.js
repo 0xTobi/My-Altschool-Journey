@@ -1,39 +1,69 @@
-import React from "react";
-import './App.css';
-
+import React, { useContext, createContext, useState } from "react";
+import "./App.css";
 
 // Create a context for our App
 const AuthContext = createContext({
-  isAuthenticated: false,
-  user: {
-    userName: "Tobi",
-    name: "Aderibigbe Tobi",
-    email: "aderibigbetobi1@gmail.com"
-  }
-})
+  // user: {
+  //   userName: "Tobi",
+  //   name: "Aderibigbe Tobi",
+  //   email: "aderibigbetobi1@gmail.com",
+  // },
+  // verified: false,
+});
+
+const UpdateAuthContext = createContext();
 
 // Define Context Provider
-function AuthProvider(props) {
-  return {}
+function AuthProvider({ children }) {
+  const [verified, setVerified] = useState(false);
+
+  function toggleVerified() {
+    setVerified(prev => !prev);
+  };
+
+  return (
+    <AuthContext.Provider
+      value={{
+        user: {
+          userName: "Matthew",
+          name: "Aderibigbe Tobi",
+          email: "aderibigbetobi1@gmail.com",
+        },
+        verified: { verified },
+      }}
+    >
+      <UpdateAuthContext.Provider value={toggleVerified}>
+        {children}
+      </UpdateAuthContext.Provider>
+    </AuthContext.Provider>
+  );
 }
 
 // A user profile component
 function UserProfile() {
+  const { user, verified } = useContext(AuthContext);
+  const { toggle } = useContext(UpdateAuthContext);
+  
+  console.log(toggle);
   return (
     <div>
       <h1>User Profile</h1>
-      <h4>Username: @Tobi</h4>
-      <h4>Full name: Tobi Aderibigbe</h4>
-      <h4>Email: adetibigbetobi1@gmail.com</h4>
+      <h4>Username: {user.userName}</h4>
+      <h4>Full name: {user.name}</h4>
+      <h4>Email: {user.email}</h4>
+      <h4>Verified: {verified ? "Yes" : "No"}</h4>
+      <button onClick={toggle}>Toggle</button>
     </div>
-  )
+  );
 }
 
 // Root component
 export default function App() {
   return (
     <div className="App">
-      <UserProfile />
+      <AuthProvider>
+        <UserProfile />
+      </AuthProvider>
     </div>
   );
 }
