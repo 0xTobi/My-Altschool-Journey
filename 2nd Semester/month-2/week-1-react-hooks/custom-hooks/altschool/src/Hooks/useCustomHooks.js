@@ -35,6 +35,11 @@ export default function useGetData(type) {
           year: "2001",
           price: "$75",
         },
+        {
+          Title: "Art of Seduction",
+          year: "2012",
+          price: "$75",
+        },
       ];
   
       // Perform some check
