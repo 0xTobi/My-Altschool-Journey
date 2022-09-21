@@ -21,6 +21,11 @@ export default function useGetData(type) {
           year: "2020",
           price: "$150,040",
         },
+        {
+          name: "Volvo",
+          year: "2022",
+          price: "$75,040",
+        },
       ];
   
       // Books...
