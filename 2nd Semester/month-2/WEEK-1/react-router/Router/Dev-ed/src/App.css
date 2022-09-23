@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: azure;
+}
+
+nav > ul {
+  display: flex;
+}
+
+nav > ul > * + * {
+  margin-inline-start: 1em;
+}
+
+nav li {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+nav li:hover {
+  background-color: rgb(29, 29, 29);
+}

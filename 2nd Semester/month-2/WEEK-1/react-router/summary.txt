@@ -1,0 +1,4 @@
+Import the Router in your index.js and wrap your root App component inside it.
+Import the {Link, Routes, Route} in the component you want to use it in.
+Define your Routes inside the Routes component.
+Use the Links component to navigate to different routes.
